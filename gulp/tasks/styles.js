@@ -28,7 +28,7 @@ var processors = [
 ]
 
 gulp.task('styles', (done) => {
-	gulp.src([config.src.sass + 'style.scss', config.src.sass + 'libs.scss'])
+	gulp.src([config.src.sass + '**.scss'])
 	.pipe(mode.development(sourcemaps.init()))
 	.pipe(sass(sassOptions).on('error', (error) => {
 		notify.onError({
@@ -46,7 +46,7 @@ gulp.task('styles', (done) => {
 
 gulp.task('styles:watch', () => {
 	gulp.watch([
-		config.src.sass + '**/*.*',
+		config.src.sass + '**/*',
 	], gulp.series('styles', (done) => {
 		reload()
 		done()
