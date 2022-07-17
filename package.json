@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "bower install && gulp",
-    "build": "bower install && gulp build --production",
+    "dev": "gulp clean && bower install && gulp",
+    "build": "gulp clean && bower install && gulp build --production",
     "clean": "gulp clean",
     "bower": "bower install",
     "lint-styles": "stylelint './src/scss/*.scss' './src/scss/partials/*.scss'",

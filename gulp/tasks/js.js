@@ -7,7 +7,6 @@ var uglify 			= require('gulp-uglify');
 var browserSync 	= require('browser-sync');
 var include 		= require('gulp-include');
 var sourcemaps 		= require('gulp-sourcemaps');
-// var eslint 			= require( 'gulp-eslint' );
 
 var reload      	= browserSync.reload;
 
@@ -18,9 +17,7 @@ gulp.task('js', (done) => {
 	.on('error', () => {
 		notify('Javascript include error');
 	})
-	.pipe(babel({
-		presets: ["@babel/preset-env"],
-	}))
+	.pipe(babel())
 	.on('error', (error) => {
 		notify.onError({
 			title: 'JS Babel Error!',

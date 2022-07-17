@@ -1,7 +1,6 @@
 var gulp 		= require('gulp');
 var config 		= require('../config');
 var size 		= require('gulp-size');
-var newer 		= require('gulp-newer');
 var mode 		= require('gulp-mode')();
 var imagemin 	= require('gulp-imagemin');
 
@@ -25,7 +24,6 @@ const imageminOptions = {
 
 gulp.task('images', (done) => {
 	gulp.src(config.src.img+'*.*')
-	// .pipe(newer(config.src.img+'*/*'))
 	.pipe(
 		mode.production(
 			imagemin([
