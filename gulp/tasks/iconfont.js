@@ -57,11 +57,12 @@ gulp.task( 'iconfont', (done) => {
 })
 
 
-gulp.task('iconfont:watch', () => {
+gulp.task('iconfont:watch', (done) => {
     gulp.watch([
         config.src.img + 'svg/*',
     ], gulp.series('iconfont', (done) => {
         reload()
         done()
     }))
+	done()
 })
