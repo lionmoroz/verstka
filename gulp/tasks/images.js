@@ -17,7 +17,7 @@ const imageminOptions = {
 			{ removeViewBox: false },
 			{ cleanupIDs: false },
 			{ removeComments: true },
-			{ removeEmptyContainers: true },
+			{ removeEmptyContainers: false },
 		],
 	},
 };
