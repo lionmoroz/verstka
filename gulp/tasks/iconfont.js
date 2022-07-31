@@ -4,12 +4,13 @@ var notify      = require('gulp-notify');
 var browserSync = require('browser-sync');
 var iconfont    = require('gulp-iconfont');
 var consolidate = require('gulp-consolidate');
+var runTimestamp = Math.round(Date.now()/1000);
 
 var reload      = browserSync.reload;
 var fontname    = 'svgfont';
 
 gulp.task( 'iconfont', (done) => {
-    gulp.src(config.src.img + 'svg/*.svg')
+    gulp.src([config.src.img + 'svg/*.svg'])
     .pipe(iconfont({
         fontName: fontname,
         prependUnicode: true,
@@ -17,7 +18,8 @@ gulp.task( 'iconfont', (done) => {
         normalize: true,
         fontHeight: 1001,
         fontStyle: 'normal',
-        fontWeight: 'normal'
+        fontWeight: 'normal',
+		timestamp: runTimestamp
     }))
     .on('error', (error) => {
         notify.onError({
