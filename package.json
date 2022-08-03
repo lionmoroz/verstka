@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "gulp clean && bower install && gulp",
+    "dev": "yarn build && bower install && gulp",
     "build": "gulp clean && bower install && gulp build --production",
     "clean": "gulp clean",
     "bower": "bower install",

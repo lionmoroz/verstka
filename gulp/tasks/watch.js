@@ -10,7 +10,13 @@ gulp.task( 'watch', gulp.parallel(
 ));
 
 gulp.task( 'default',
-    gulp.series('html', 'iconfont', 'sprite', 'copy', 'styles', 'js',
+    gulp.series(
+    	'html',
+		'iconfont',
+		'sprite',
+		'copy',
+		'styles',
+		'js',
         gulp.series('server', 'watch')
     )
 );
