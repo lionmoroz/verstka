@@ -1,0 +1,44 @@
+.categories{
+    background-color: $blue;
+
+    .big_title{
+        padding-bottom: 0;
+    }
+}
+
+.categories .flex_title{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 0;
+}
+.categories_title{
+    position: relative;
+    padding-bottom: 80px;
+
+    .stripes{
+        position: absolute;
+        transform: rotate(80deg);
+        top: -25px;
+        right: -60px;
+    }
+}
+.categories_slider_item{
+    padding-right: 32px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    img{
+        width: 296px;
+        height: 296px;
+    }
+
+    h2{
+        color: $darcBlue;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 48px;
+    }
+}
